@@ -16,6 +16,7 @@
       --black: #111111;
       --teal: #00a6b8;
       --yellow: #ffd84d;
+      --orange: #ff9b3d;
       --white: #ffffff;
     }
 
@@ -43,7 +44,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 50px;
+      padding: 16px 36px;
       position: sticky;
       top: 0;
       z-index: 999;
@@ -51,24 +52,27 @@
 
     .logo {
       font-family: "Anton", sans-serif;
-      font-size: 42px;
+      font-size: 39px;
       line-height: 0.95;
       font-style: italic;
       color: var(--dark-pink);
       letter-spacing: 1px;
+      min-width: max-content;
     }
 
     .nav-links {
       display: flex;
-      gap: 22px;
+      gap: 20px;
       list-style: none;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .nav-links a {
       text-decoration: none;
       font-weight: 900;
-      font-size: 25px;
+      font-size: 19px;
       color: var(--black);
     }
 
@@ -78,19 +82,19 @@
     }
 
     .order-btn {
-     background: #a83b63;
-     color: white !important;
-     border: 5px solid var(--black);
-     padding: 12px 22px;
-     font-size: 14px !important;
-     line-height: 1.1;
-     text-align: center;
-     box-shadow: 6px 6px 0 var(--black);
-     display: inline-block;
+      background: #a83b63;
+      color: white !important;
+      border: 5px solid var(--black);
+      padding: 11px 20px;
+      font-size: 13px !important;
+      line-height: 1.1;
+      text-align: center;
+      box-shadow: 5px 5px 0 var(--black);
+      display: inline-block;
     }
 
     .hero {
-      min-height: 85vh;
+      min-height: 88vh;
       background: var(--pink);
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -99,7 +103,7 @@
     }
 
     .hero-text {
-      padding: 70px 55px;
+      padding: 74px 55px;
       position: relative;
     }
 
@@ -117,12 +121,13 @@
     .hero h1 {
       font-family: "Anton", sans-serif;
       color: var(--dark-pink);
-      font-size: clamp(55px, 7vw, 90px);
+      font-size: clamp(55px, 7vw, 92px);
       line-height: 0.95;
       letter-spacing: 1px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       position: relative;
       z-index: 2;
+      text-transform: uppercase;
     }
 
     .hero h1 span {
@@ -131,13 +136,31 @@
     }
 
     .hero p {
-      max-width: 560px;
+      max-width: 580px;
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #532238;
       margin-bottom: 35px;
       position: relative;
       z-index: 2;
+      font-weight: 600;
+    }
+
+    .hero-badges {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mini-badge {
+      background: var(--yellow);
+      border: 4px solid var(--black);
+      padding: 8px 14px;
+      font-weight: 900;
+      box-shadow: 4px 4px 0 var(--black);
     }
 
     .big-btn {
@@ -146,9 +169,9 @@
       color: white;
       text-decoration: none;
       font-weight: 900;
-      font-size: 27px;
+      font-size: 25px;
       border: 6px solid var(--black);
-      padding: 20px 34px;
+      padding: 18px 32px;
       box-shadow: 8px 8px 0 var(--black);
       transition: 0.2s;
       position: relative;
@@ -188,7 +211,7 @@
       inset: -80px;
       background: repeating-conic-gradient(
         from 0deg,
-        rgba(255,255,255,0.16) 0deg 8deg,
+        rgba(255,255,255,0.18) 0deg 8deg,
         transparent 8deg 16deg
       );
     }
@@ -197,9 +220,9 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      font-size: 110px;
-      line-height: 1.1;
-      filter: drop-shadow(7px 7px 0 rgba(0,0,0,0.25));
+      font-size: 112px;
+      line-height: 1.08;
+      filter: drop-shadow(8px 8px 0 rgba(0,0,0,0.25));
     }
 
     .cloud {
@@ -207,7 +230,7 @@
       bottom: -40px;
       width: 120%;
       height: 130px;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.65);
       border-radius: 50% 50% 0 0;
     }
 
@@ -217,7 +240,7 @@
 
     .section-title {
       font-family: "Anton", sans-serif;
-      font-size: clamp(45px, 5vw, 75px);
+      font-size: clamp(45px, 5vw, 76px);
       line-height: 1;
       color: var(--dark-pink);
       margin-bottom: 15px;
@@ -226,10 +249,21 @@
 
     .section-sub {
       font-size: 18px;
-      max-width: 780px;
+      max-width: 850px;
       color: #333;
-      line-height: 1.7;
+      line-height: 1.75;
       margin-bottom: 45px;
+      font-weight: 600;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--lime);
+      border: 4px solid var(--black);
+      padding: 8px 18px;
+      font-weight: 900;
+      margin-bottom: 18px;
+      box-shadow: 4px 4px 0 var(--black);
     }
 
     .menu-section {
@@ -249,6 +283,7 @@
       padding: 28px;
       box-shadow: 8px 8px 0 var(--black);
       transition: 0.2s;
+      min-height: 320px;
     }
 
     .menu-card:hover {
@@ -260,6 +295,8 @@
     .menu-card:nth-child(2) { background: #9bdcff; }
     .menu-card:nth-child(3) { background: #b9f274; }
     .menu-card:nth-child(4) { background: #e7c0ff; }
+    .menu-card:nth-child(5) { background: #ffe17a; }
+    .menu-card:nth-child(6) { background: #ffb980; }
 
     .emoji {
       font-size: 65px;
@@ -271,20 +308,23 @@
       font-size: 32px;
       color: var(--dark-pink);
       margin-bottom: 8px;
+      text-transform: uppercase;
     }
 
     .menu-card p {
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 18px;
+      line-height: 1.6;
     }
 
     .price {
       font-family: "Anton", sans-serif;
       font-size: 35px;
       color: var(--black);
+      margin-top: auto;
     }
 
-    .story-section {
+    .about-section {
       background: var(--yellow);
       border-bottom: 7px solid var(--black);
       display: grid;
@@ -293,142 +333,180 @@
       align-items: center;
     }
 
-    .story-box {
+    .about-box {
       background: var(--cream);
       border: 6px solid var(--black);
       padding: 35px;
       box-shadow: 8px 8px 0 var(--black);
     }
 
-    .story-box p {
+    .about-box p {
       font-size: 17px;
-      line-height: 1.8;
+      line-height: 1.85;
+      font-weight: 600;
+      margin-bottom: 18px;
     }
 
-    .webqual-section {
+    .benefit-section {
       background: var(--pink);
       border-bottom: 7px solid var(--black);
     }
 
-    .webqual-intro {
-      background: var(--cream);
-      border: 6px solid var(--black);
-      padding: 35px;
-      margin-bottom: 35px;
-      box-shadow: 8px 8px 0 var(--black);
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--lime);
-      border: 4px solid var(--black);
-      padding: 8px 18px;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .webqual-grid {
+    .benefit-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 26px;
     }
 
-    .wq-card {
+    .benefit-card {
       background: var(--cream);
       border: 6px solid var(--black);
       padding: 30px;
       box-shadow: 8px 8px 0 var(--black);
     }
 
-    .wq-number {
+    .benefit-card h3 {
       font-family: "Anton", sans-serif;
-      font-size: 60px;
-      color: var(--lime);
-      -webkit-text-stroke: 2px var(--black);
-      margin-bottom: 8px;
-    }
-
-    .wq-card h3 {
-      font-family: "Anton", sans-serif;
-      font-size: 35px;
+      font-size: 34px;
       color: var(--dark-pink);
-      margin-bottom: 8px;
-    }
-
-    .wq-card h4 {
-      font-size: 15px;
-      margin-bottom: 20px;
-      color: var(--teal);
+      margin-bottom: 12px;
       text-transform: uppercase;
     }
 
-    .wq-card p {
+    .benefit-card p {
       line-height: 1.7;
-      margin-bottom: 18px;
+      font-weight: 650;
     }
 
-    .wq-card ul {
-      padding-left: 18px;
-      margin-bottom: 20px;
-    }
-
-    .wq-card li {
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    details {
-      background: white;
-      border: 4px solid var(--black);
-      padding: 15px;
-      margin-top: 18px;
-    }
-
-    summary {
-      font-weight: 900;
-      cursor: pointer;
-      color: var(--dark-pink);
-    }
-
-    .questions {
-      margin-top: 15px;
-      list-style-position: inside;
-    }
-
-    .questions li {
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .references {
+    .best-section {
       background: var(--cream);
       border-bottom: 7px solid var(--black);
     }
 
-    .ref-grid {
+    .best-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 35px;
+      align-items: center;
     }
 
-    .ref-card {
-      background: white;
-      border: 5px solid var(--black);
-      padding: 24px;
-      box-shadow: 7px 7px 0 var(--black);
+    .best-visual {
+      background: var(--lime);
+      border: 7px solid var(--black);
+      box-shadow: 10px 10px 0 var(--black);
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 115px;
+      text-align: center;
     }
 
-    .ref-card h3 {
+    .best-content {
+      background: #ffc0d5;
+      border: 7px solid var(--black);
+      box-shadow: 10px 10px 0 var(--black);
+      padding: 42px;
+    }
+
+    .best-content h3 {
+      font-family: "Anton", sans-serif;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1;
+      color: var(--dark-pink);
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .best-content p {
+      font-size: 18px;
+      line-height: 1.75;
+      font-weight: 650;
+      margin-bottom: 20px;
+    }
+
+    .tag-list {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .tag {
+      background: var(--yellow);
+      border: 4px solid var(--black);
+      padding: 8px 14px;
+      font-weight: 900;
+    }
+
+    .testi-section {
+      background: var(--teal);
+      border-bottom: 7px solid var(--black);
+    }
+
+    .testi-section .section-title,
+    .testi-section .section-sub {
+      color: var(--cream);
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+    }
+
+    .testi-card {
+      background: var(--cream);
+      border: 6px solid var(--black);
+      padding: 28px;
+      box-shadow: 8px 8px 0 var(--black);
+    }
+
+    .stars {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .testi-card p {
+      line-height: 1.75;
+      font-weight: 650;
+      margin-bottom: 18px;
+    }
+
+    .testi-card h4 {
+      font-size: 17px;
+      color: var(--dark-pink);
+      font-weight: 900;
+    }
+
+    .location-section {
+      background: var(--yellow);
+      border-bottom: 7px solid var(--black);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 26px;
+    }
+
+    .contact-card {
+      background: var(--cream);
+      border: 6px solid var(--black);
+      padding: 30px;
+      box-shadow: 8px 8px 0 var(--black);
+    }
+
+    .contact-card h3 {
       font-family: "Anton", sans-serif;
       color: var(--dark-pink);
-      font-size: 25px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
     }
 
-    .ref-card p {
-      font-size: 14px;
+    .contact-card p {
+      font-weight: 650;
       line-height: 1.7;
     }
 
@@ -442,7 +520,16 @@
       font-family: "Anton", sans-serif;
       font-size: clamp(45px, 6vw, 85px);
       color: var(--black);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .cta p {
+      max-width: 740px;
+      margin: 0 auto 35px;
+      font-size: 18px;
+      line-height: 1.75;
+      font-weight: 700;
     }
 
     footer {
@@ -462,7 +549,12 @@
       color: var(--pink);
     }
 
-    @media (max-width: 900px) {
+    footer p {
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+    }
+
+    @media (max-width: 980px) {
       nav {
         flex-direction: column;
         gap: 18px;
@@ -470,13 +562,11 @@
       }
 
       .nav-links {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
       }
 
       .nav-links a {
-        font-size: 18px;
+        font-size: 17px;
       }
 
       .hero {
@@ -488,7 +578,8 @@
         border-top: 7px solid var(--black);
       }
 
-      .story-section {
+      .about-section,
+      .best-wrapper {
         grid-template-columns: 1fr;
       }
 
@@ -498,6 +589,10 @@
 
       .hero-text {
         padding: 55px 25px;
+      }
+
+      .fruit-hero {
+        font-size: 82px;
       }
     }
   </style>
@@ -511,15 +606,16 @@
     </div>
 
     <ul class="nav-links">
+      <li><a href="#home">HOME</a></li>
       <li><a href="#menu">MENU</a></li>
-      <li><a href="#webqual">LAB SPECIALS</a></li>
-      <li><a href="#story">STORY</a></li>
-      <li><a href="#referensi">REFERENSI</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#benefit">BENEFITS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
       <li><a href="#order" class="order-btn">ORDER<br>NOW</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-text">
       <h1>
         MADE FROM<br>
@@ -528,10 +624,16 @@
         <span>JUICE!</span>
       </h1>
 
+      <div class="hero-badges">
+        <span class="mini-badge">100% FRESH</span>
+        <span class="mini-badge">NO PRESERVATIVE</span>
+        <span class="mini-badge">DAILY BOOST</span>
+      </div>
+
       <p>
-        Minuman jus segar dengan konsep warna-warni, fun, dan penuh energi.
-        Dibuat dari buah pilihan untuk memberikan rasa manis, segar, dan
-        superpower dalam setiap tegukan.
+        Everything Juice adalah brand jus buah segar dengan konsep retro comic pop-art.
+        Setiap minuman dibuat dari buah pilihan dengan rasa ceria, warna playful, dan
+        energi segar untuk menemani aktivitas harianmu.
       </p>
 
       <a href="#menu" class="big-btn">TASTE THE POWER!</a>
@@ -541,7 +643,7 @@
       <div class="art-box">
         <div class="sunburst"></div>
         <div class="fruit-hero">
-          🍓 🥬 🍋<br>
+          🍓 🥭 🍋<br>
           🧃 🫐 🥝
         </div>
         <div class="cloud"></div>
@@ -553,232 +655,203 @@
     <span class="badge">MENU SPECIAL</span>
     <h2 class="section-title">Pilih Rasa Superpower Kamu</h2>
     <p class="section-sub">
-      Setiap menu dibuat dengan tampilan cerah dan rasa segar agar pengguna
-      mudah mengenali produk yang ditawarkan pada landing page.
+      Dari rasa berry yang manis, kiwi yang segar, sampai tropical mango yang cerah,
+      setiap menu Everything Juice dibuat untuk memberikan sensasi fresh di setiap tegukan.
     </p>
 
     <div class="menu-grid">
       <div class="menu-card">
         <div class="emoji">🍓</div>
         <h3>Berry Bomb</h3>
-        <p>Perpaduan strawberry, raspberry, dan lychee yang segar.</p>
+        <p>Perpaduan strawberry, raspberry, dan lychee yang manis segar.</p>
         <div class="price">Rp 35.000</div>
       </div>
 
       <div class="menu-card">
         <div class="emoji">🫐</div>
         <h3>Blue Power</h3>
-        <p>Blueberry, blackcurrant, dan coconut untuk rasa unik.</p>
+        <p>Blueberry, blackcurrant, dan coconut untuk rasa unik yang creamy.</p>
         <div class="price">Rp 38.000</div>
       </div>
 
       <div class="menu-card">
         <div class="emoji">🥝</div>
         <h3>Green Smash</h3>
-        <p>Kiwi, bayam, mentimun, dan lime untuk pilihan sehat.</p>
+        <p>Kiwi, mentimun, lime, dan apel hijau untuk pilihan fresh & light.</p>
         <div class="price">Rp 32.000</div>
       </div>
 
       <div class="menu-card">
         <div class="emoji">🍇</div>
         <h3>Grape Fury</h3>
-        <p>Anggur, dragon fruit, dan acai dengan rasa premium.</p>
+        <p>Anggur, dragon fruit, dan acai dengan rasa premium yang bold.</p>
         <div class="price">Rp 42.000</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="emoji">🥭</div>
+        <h3>Mango Pop</h3>
+        <p>Mangga, jeruk, dan passion fruit untuk rasa tropis yang cerah.</p>
+        <div class="price">Rp 36.000</div>
+      </div>
+
+      <div class="menu-card">
+        <div class="emoji">🍍</div>
+        <h3>Tropical Punch</h3>
+        <p>Nanas, lemon, dan mint untuk sensasi segar yang bikin melek.</p>
+        <div class="price">Rp 34.000</div>
       </div>
     </div>
   </section>
 
-  <section class="story-section" id="story">
+  <section class="about-section" id="about">
     <div>
       <span class="badge">OUR STORY</span>
       <h2 class="section-title">Jus Ceria Untuk Hari Yang Lebih Segar</h2>
       <p class="section-sub">
-        EVERYTHING JUICE dibuat sebagai brand jus modern dengan tampilan
-        retro comic pop-art agar lebih menarik bagi pengguna.
+        Everything Juice hadir sebagai minuman sehat yang tetap fun, colorful, dan
+        dekat dengan gaya hidup anak muda.
       </p>
     </div>
 
-    <div class="story-box">
+    <div class="about-box">
       <p>
-        Landing page ini dirancang untuk memperkenalkan produk jus secara
-        informatif, menarik, dan mudah digunakan. Selain menampilkan produk,
-        website ini juga digunakan sebagai objek pengukuran kualitas layanan
-        menggunakan metode WebQual 4.0 berdasarkan persepsi pengguna.
+        Kami percaya jus bukan cuma minuman sehat, tapi juga mood booster. Karena itu,
+        Everything Juice menggabungkan buah segar, tampilan yang eye-catching, dan rasa
+        yang mudah disukai oleh berbagai kalangan.
+      </p>
+      <p>
+        Dengan konsep retro comic pop-art, website ini dirancang agar pengunjung langsung
+        merasakan kesan energik, playful, dan mudah mengenali menu yang ditawarkan.
       </p>
     </div>
   </section>
 
-  <section class="webqual-section" id="webqual">
-    <div class="webqual-intro">
-      <span class="badge">WEBQUAL 4.0</span>
-      <h2 class="section-title">Dimensi Kualitas Website</h2>
-      <p class="section-sub">
-        WebQual 4.0 digunakan untuk mengukur kualitas website berdasarkan
-        persepsi pengguna melalui tiga dimensi utama, yaitu Usability,
-        Information Quality, dan Service Interaction Quality.
-      </p>
-    </div>
-
-    <div class="webqual-grid">
-      <div class="wq-card">
-        <div class="wq-number">01</div>
-        <h3>Usability</h3>
-        <h4>Kualitas Kegunaan</h4>
-        <p>
-          Mengukur kemudahan pengguna dalam memahami, mempelajari, dan
-          menggunakan website.
-        </p>
-
-        <ul>
-          <li>Tampilan website mudah dipahami.</li>
-          <li>Navigasi menu mudah ditemukan.</li>
-          <li>Website mudah digunakan pengguna baru.</li>
-          <li>Desain visual menarik dan nyaman dilihat.</li>
-        </ul>
-
-        <details>
-          <summary>Lihat Pertanyaan Kuesioner</summary>
-          <ol class="questions">
-            <li>Saya merasa tampilan website EVERYTHING JUICE mudah dipahami.</li>
-            <li>Menu navigasi pada website mudah ditemukan.</li>
-            <li>Saya dapat dengan cepat memahami cara menggunakan website ini.</li>
-            <li>Desain website terlihat menarik dan nyaman dilihat.</li>
-            <li>Website ini memberikan pengalaman interaksi yang menyenangkan.</li>
-            <li>Tata letak informasi pada website mudah dipahami.</li>
-          </ol>
-        </details>
-      </div>
-
-      <div class="wq-card">
-        <div class="wq-number">02</div>
-        <h3>Information Quality</h3>
-        <h4>Kualitas Informasi</h4>
-        <p>
-          Mengukur kualitas informasi yang ditampilkan, termasuk kejelasan,
-          kelengkapan, akurasi, dan relevansi informasi.
-        </p>
-
-        <ul>
-          <li>Informasi produk jelas dan lengkap.</li>
-          <li>Informasi harga mudah ditemukan.</li>
-          <li>Konten sesuai kebutuhan pengguna.</li>
-          <li>Bahasa mudah dipahami.</li>
-        </ul>
-
-        <details>
-          <summary>Lihat Pertanyaan Kuesioner</summary>
-          <ol class="questions" start="7">
-            <li>Informasi tentang produk jus pada website akurat dan dapat dipercaya.</li>
-            <li>Informasi yang disajikan website relevan dengan kebutuhan saya.</li>
-            <li>Informasi pada website selalu diperbarui.</li>
-            <li>Informasi disajikan dengan bahasa yang jelas dan mudah dimengerti.</li>
-            <li>Detail bahan jus disajikan secara lengkap.</li>
-            <li>Informasi harga produk ditampilkan dengan jelas.</li>
-          </ol>
-        </details>
-      </div>
-
-      <div class="wq-card">
-        <div class="wq-number">03</div>
-        <h3>Service Interaction</h3>
-        <h4>Kualitas Interaksi Layanan</h4>
-        <p>
-          Mengukur kualitas interaksi pengguna dengan layanan website,
-          termasuk rasa aman, kepercayaan, dan kemudahan komunikasi.
-        </p>
-
-        <ul>
-          <li>Pengguna merasa aman saat mengakses website.</li>
-          <li>Website terlihat dapat dipercaya.</li>
-          <li>Komunikasi layanan mudah dilakukan.</li>
-          <li>Proses pemesanan terasa jelas.</li>
-        </ul>
-
-        <details>
-          <summary>Lihat Pertanyaan Kuesioner</summary>
-          <ol class="questions" start="13">
-            <li>Saya merasa data pribadi saya aman di website EVERYTHING JUICE.</li>
-            <li>Saya dapat dengan mudah berkomunikasi dengan pihak EVERYTHING JUICE.</li>
-            <li>Saya percaya pada website dan layanan yang diberikan.</li>
-            <li>Website memberikan respons layanan yang cepat dan membantu saya.</li>
-            <li>Proses transaksi atau pembelian online terasa aman dan terpercaya.</li>
-            <li>Website memberikan pengalaman berbelanja yang menyenangkan.</li>
-          </ol>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="references" id="referensi">
-    <span class="badge">SUMBER REFERENSI</span>
-    <h2 class="section-title">Referensi WebQual</h2>
+  <section class="benefit-section" id="benefit">
+    <span class="badge">WHY CHOOSE US?</span>
+    <h2 class="section-title">Kenapa Pilih Everything Juice?</h2>
     <p class="section-sub">
-      Pertanyaan kuesioner disusun berdasarkan dimensi WebQual 4.0 dan
-      didukung oleh referensi ilmiah berikut.
+      Kami fokus pada rasa, kesegaran, tampilan, dan pengalaman pelanggan agar setiap order
+      terasa menyenangkan dari awal sampai akhir.
     </p>
 
-    <div class="ref-grid">
-      <div class="ref-card">
-        <h3>Referensi 1</h3>
-        <p>
-          Barnes, S. J., & Vidgen, R. T. (2002). An integrative approach to
-          the assessment of e-commerce quality. Journal of Electronic Commerce
-          Research, 3(3), 114–127.
-        </p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>Fresh Fruit</h3>
+        <p>Buah dipilih setiap hari agar rasa tetap segar, alami, dan berkualitas.</p>
       </div>
 
-      <div class="ref-card">
-        <h3>Referensi 2</h3>
-        <p>
-          Loiacono, E. T., Watson, R. T., & Goodhue, D. L. (2007).
-          WebQual: An Instrument for Consumer Evaluation of Websites.
-          International Journal of Electronic Commerce, 11(3), 51–87.
-        </p>
+      <div class="benefit-card">
+        <h3>No Boring Taste</h3>
+        <p>Setiap menu punya kombinasi rasa yang fun, unik, dan tidak monoton.</p>
       </div>
 
-      <div class="ref-card">
-        <h3>Referensi 3</h3>
-        <p>
-          Aelani, K., & Falahah. (2012). Pengukuran Kualitas Website
-          Menggunakan Metode WebQual 4.0. Seminar Nasional Informatika.
-        </p>
+      <div class="benefit-card">
+        <h3>Colorful Look</h3>
+        <p>Tampilan minuman dibuat cerah dan menarik, cocok untuk dinikmati sekaligus difoto.</p>
       </div>
 
-      <div class="ref-card">
-        <h3>Referensi 4</h3>
-        <p>
-          Hasanov, J., & Khalid, H. (2015). The impact of website quality on
-          online purchase intention. Procedia Computer Science, 72, 382–389.
-        </p>
+      <div class="benefit-card">
+        <h3>Easy Order</h3>
+        <p>Informasi menu, harga, dan kontak dibuat jelas supaya pelanggan mudah memesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="best-section" id="best-seller">
+    <span class="badge">BEST SELLER</span>
+    <h2 class="section-title">Menu Paling Dicari</h2>
+    <p class="section-sub">
+      Berry Bomb menjadi menu favorit karena rasanya manis, segar, dan cocok diminum kapan saja.
+    </p>
+
+    <div class="best-wrapper">
+      <div class="best-visual">
+        🍓<br>🧃
       </div>
 
-      <div class="ref-card">
-        <h3>Referensi 5</h3>
+      <div class="best-content">
+        <h3>Berry Bomb</h3>
         <p>
-          Napitupulu, D. (2017). Kajian Kualitas E-Learning Berdasarkan
-          Perspektif Mahasiswa. Jurnal Cakrawala Pendidikan, 36(2), 236–247.
+          Berry Bomb adalah kombinasi strawberry, raspberry, dan lychee yang menghasilkan
+          rasa manis-asam seimbang. Cocok untuk kamu yang ingin minuman fresh dengan warna
+          pink ceria khas Everything Juice.
         </p>
+        <div class="price">Rp 35.000</div>
+        <div class="tag-list">
+          <span class="tag">BEST SELLER</span>
+          <span class="tag">SWEET</span>
+          <span class="tag">FRESH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testi-section" id="testimonials">
+    <span class="badge">CUSTOMER REVIEWS</span>
+    <h2 class="section-title">Kata Mereka Tentang Everything Juice</h2>
+    <p class="section-sub">
+      Beberapa komentar pelanggan yang sudah mencoba menu Everything Juice.
+    </p>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Rasanya fresh banget, desain websitenya juga lucu dan gampang buat lihat menu.”</p>
+        <h4>— Rani, Mahasiswa</h4>
       </div>
 
-      <div class="ref-card">
-        <h3>Referensi 6</h3>
-        <p>
-          WebQual Methodology by Stuart Barnes and Richard Vidgen digunakan
-          sebagai dasar pengukuran kualitas website berdasarkan persepsi
-          pengguna.
-        </p>
+      <div class="testi-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Aku suka Berry Bomb karena manisnya pas. Warnanya juga cantik banget.”</p>
+        <h4>— Dinda, Pelanggan</h4>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>“Menu dan harganya jelas. Website-nya menarik dan beda dari brand jus biasa.”</p>
+        <h4>— Fikri, Pelanggan</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-section" id="contact">
+    <span class="badge">CONTACT & LOCATION</span>
+    <h2 class="section-title">Temukan Kami</h2>
+    <p class="section-sub">
+      Hubungi Everything Juice untuk pemesanan, pertanyaan menu, atau kerja sama acara.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Jl. Buah Segar No. 12, Bandung<br>Buka setiap hari pukul 09.00–21.00 WIB</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>WhatsApp</h3>
+        <p>+62 812-3456-7890<br>Chat kami untuk order dan tanya menu favoritmu.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Instagram</h3>
+        <p>@everythingjuice.id<br>Follow untuk promo, menu baru, dan update store.</p>
       </div>
     </div>
   </section>
 
   <section class="cta" id="order">
     <h2>READY TO TASTE THE POWER?</h2>
-    <a href="#menu" class="big-btn">ORDER NOW!</a>
+    <p>
+      Pilih menu favoritmu dan rasakan kombinasi buah segar, warna ceria, dan rasa penuh energi
+      dari Everything Juice.
+    </p>
+    <a href="#contact" class="big-btn">ORDER NOW!</a>
   </section>
 
   <footer>
     <h3>EVERYTHING JUICE</h3>
-    <p>© 2025 EVERYTHING JUICE. Landing Page WebQual 4.0.</p>
+    <p>© 2026 EVERYTHING JUICE. Fresh juice with colorful energy.</p>
   </footer>
 
 </body>
